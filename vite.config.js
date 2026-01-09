@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
+/* TODO: import filament laravel library */
 
 export default defineConfig({
     plugins: [
