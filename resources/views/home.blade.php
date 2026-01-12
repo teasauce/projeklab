@@ -37,5 +37,19 @@
         @endforeach
     </ul>
 
+    <h2>👨‍🏫 Faculty Members</h2>
+
+    <ul>
+        @foreach ($professors as $prof)
+            <li>
+                <strong>{{ $prof['name'] }}</strong><br>
+                <small>
+                    Department of {{ $prof['department'] }}<br>
+                    Research Areas: {{ $prof['research'] }}
+                </small>
+            </li>
+        @endforeach
+    </ul>
+
 </div>
 @endsection

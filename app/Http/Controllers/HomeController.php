@@ -40,6 +40,29 @@ class HomeController extends Controller
                 'Humanities',
                 'Computer Science',
             ],
+
+            'professors' => [
+            [
+                'name' => 'Prof. Hiroshi Tanaka',
+                'department' => 'Computer Science',
+                'research' => 'Artificial Intelligence, Machine Learning'
+            ],
+            [
+                'name' => 'Prof. Keiko Yamamoto',
+                'department' => 'Environmental Studies',
+                'research' => 'Climate Change, Sustainability'
+            ],
+            [
+                'name' => 'Prof. Masaru Suzuki',
+                'department' => 'Physics',
+                'research' => 'Quantum Mechanics'
+            ],
+            [
+                'name' => 'Prof. Ayumi Nakamura',
+                'department' => 'Economics',
+                'research' => 'Behavioral Economics'
+            ],
+        ],
         ]);
     }
 }
