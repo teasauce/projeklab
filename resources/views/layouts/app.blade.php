@@ -28,6 +28,10 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -43,14 +47,28 @@
         }
 
         nav a {
+            position: relative;
             color: rgba(255,255,255,0.9);
             margin-right: 18px;
             text-decoration: none;
             font-size: 0.95rem;
+            padding-bottom: 4px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: rgba(255,255,255,0.9);
+            transition: width 0.25s ease, left 0.25s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
         }
 
         .container {
@@ -61,6 +79,7 @@
 
         main {
             padding: 40px 0;
+            flex: 1;
         }
 
         .card {
@@ -111,6 +130,28 @@
             font-size: 0.9rem;
             margin-top: 60px;
         }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .card p.muted {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .subject-link {
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .subject-link:hover {
+            text-decoration: underline;
+        }
+
     </style>
 
 </head>
@@ -121,10 +162,10 @@
         <h1>Academic Article Platform</h1>
         <nav>
             <a href="/">Home</a>
-            <a href="#">Browse</a>
-            <a href="#">Subjects</a>
+            <a href="/browse">Browse</a>
+            <a href="/subjects">Subjects</a>
             <a href="#">Search</a>
-            <a href="#">About</a>
+            <a href="/about">About</a>
         </nav>
     </div>
 </header>
