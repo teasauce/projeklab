@@ -2,6 +2,8 @@
 
 @section('content')
 
+<br>
+
 <h2>About This Platform</h2>
 
 <div class="card">

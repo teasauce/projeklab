@@ -1,3 +1,6 @@
-- buat fade in/fade out pada cursor over navbar
-- proceed to make more pages
-- use laravel scout later
+- proceed to make more pages []
+- use laravel scout later []
+
+backend
+
+database: article, professors, 

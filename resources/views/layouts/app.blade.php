@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Academic Article Platform</title>
+    <title>UNM JTIK Article Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @vite('resources/css/app.css')
 
     <style>
+        @font-face {
+          font-family: "Aileron";
+          src: url("/fonts/Aileron-Regular.otf");
+        }
+        
+        @font-face {
+          font-family: "Aileron";
+          src: url("/fonts/Aileron-Bold.otf");
+        }
+
         :root {
             --primary: #1f3a5f;
             --primary-light: #2c5282;
             --bg: #f4f6f8;
-            --card: #ffffff;
+            --card: #fefefe;
             --text: #1a202c;
             --muted: #6b7280;
             --border: #e5e7eb;
@@ -23,7 +33,7 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: 'Aileron';
             margin: 0;
             background: var(--bg);
             color: var(--text);
@@ -34,6 +44,31 @@
             flex-direction: column;
         }
 
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+
+        
+        .header-right {
+            flex: 1;
+            max-width: 420px;
+        }
+        
+        .header-right p {
+            margin: justify;
+            font-size: 0.85rem;
+            line-height: 1.1;
+            color: rgba(255, 255, 255, 255);
+            text-align: justify;
+        }
+
         header {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: #fff;
@@ -42,7 +77,7 @@
 
         header h1 {
             margin: 0 0 10px;
-            font-size: 1.8rem;
+            font-size: 2.0rem;
             font-weight: 600;
         }
 
@@ -51,7 +86,7 @@
             color: rgba(255,255,255,0.9);
             margin-right: 18px;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 1.25rem;
             padding-bottom: 4px;
         }
 
@@ -63,7 +98,7 @@
             width: 0;
             height: 2px;
             background: rgba(255,255,255,0.9);
-            transition: width 0.25s ease, left 0.25s ease;
+            transition: width 0.15s ease, left 0.15s ease;
         }
 
         nav a:hover::after {
@@ -158,15 +193,17 @@
 <body>
 
 <header>
-    <div class="container">
-        <h1>Academic Article Platform</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/browse">Browse</a>
-            <a href="/subjects">Subjects</a>
-            <a href="#">Search</a>
-            <a href="/about">About</a>
-        </nav>
+    <div class="container header-inner">
+        <div class="header-left">
+            <h1>Academic Article Platform</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/browse">Browse</a>
+                <a href="#">Search</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+
     </div>
 </header>
 
@@ -175,7 +212,12 @@
 </main>
 
 <footer>
-    © 2026 Academic Research Platform
+    © <b> 2026 UNM JTIK </b>
+    | All rights reserved
+    <p style="text-align: justify-center; font-family: arial;">
+      This website is managed by the Faculty of Information and Computer 
+      Engineering from the University of Makassar.
+    </p>
 </footer>
 
 </body>

@@ -5,7 +5,22 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@font-face {
+  font-family: "Aileron";
+  src: url("fonts/Aileron-Regular.otf");
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("fonts/Aileron-Bold.otf");
+}
+
+/* Tailwind v4 theme config 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: "Aileron", system-ui, sans-serif;
+} */
+
+body
+{
+  font-family: "Aileron";
 }

@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+    <br>
 
     <div class="card">
-        <h2>📌 Newly Added Articles</h2>
+        <h2>Newly Added Articles</h2>
         <ul>
             @foreach ($newArticles as $article)
                 <li>
@@ -16,7 +18,7 @@
     </div>
 
     <div class="card">
-        <h2>📚 Newly Released Issues</h2>
+        <h2>Newly Released Issues</h2>
         <ul>
             @foreach ($newIssues as $issue)
                 <li>
@@ -28,7 +30,7 @@
     </div>
 
     <div class="card">
-        <h2>🔥 Most Viewed Articles</h2>
+        <h2>Most Viewed Articles</h2>
         <ul>
             @foreach ($popularArticles as $article)
                 <li>{{ $article }}</li>
@@ -37,7 +39,7 @@
     </div>
 
     <div class="card">
-        <h2>📖 Browse by Subject</h2>
+        <h2>Browse by Subject</h2>
         <ul>
             @foreach ($subjects as $subject)
                 <li>{{ $subject }}</li>
@@ -46,7 +48,7 @@
     </div>
 
     <div class="card">
-        <h2>👨‍🏫 Faculty Members</h2>
+        <h2>Faculty Members</h2>
         <ul>
             @foreach ($professors as $prof)
                 <li>
